@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js"
-, "app/api/users/users.js", "pages/api/users.js"  ],
+, "app/api/users/users.js", "pages/api/users/users.js"  ],
   "exclude": ["node_modules"]
 }

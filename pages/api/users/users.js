@@ -1,15 +1,16 @@
-import prisma from "../client";
-
+import prisma from "../../client";
+import bcrypt from "bcrypt"
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       // Assuming the request body contains the user data
-      const { name, email } = req.body;
-
-      const user = await prisma.user.create({
+      const { name, email,passwordString } = req.body;
+      const password= await bcrypt.hash(passwordString,10)
+      const user = await prisma.users.create({
         data: {
           name,
           email,
+          password,
         },
       });
 

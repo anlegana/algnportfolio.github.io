@@ -1,15 +1,15 @@
 'use client';
 import axios from 'axios'
-import createUser from "@/pages/api/users";
 import { FormEvent } from "react";
 
 export default function Page() {
     const handleSubmit = async (event:FormEvent<HTMLFormElement>) => {
         event.preventDefault();
        
-        const { data } = await axios.post('/api/users', {
+        const { data } = await axios.post('/api/users/users', {
           email: 'a_leo97@hotmail.es',
           name: 'andres',
+          passwordString:'57895415'
         });
       
       };
